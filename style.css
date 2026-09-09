@@ -310,8 +310,13 @@ h2 {
 }
 
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-8px) scale(1.02) rotate(2deg);
     box-shadow: 12px 12px 0px var(--vermelho-cuphead);
+    z-index: 10;
+}
+
+.card:nth-child(even):hover {
+    transform: translateY(-8px) scale(1.02) rotate(-2deg);
 }
 
 .card h3 {
@@ -485,4 +490,9 @@ input:focus, textarea:focus {
     .grid-cards { grid-template-columns: 1fr 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; align-items: start; }
     .carousel-item { flex: 0 0 45%; }
+}
+
+.btn-primario:active, .btn-voltar:active {
+    transform: translateY(2px);
+    box-shadow: 4px 4px 0px var(--amarelo-vintage);
 }
